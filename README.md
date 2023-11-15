@@ -77,4 +77,7 @@ This Proof of Concept (POC) specifically demonstrates the first case, leveraging
    - Move the RDS instance to a private subnet for enhanced security. Ensure routing and route table configurations, allowing traffic from ASG. Private traffic is often more cost-effective.
 
 8. **CI/CD Implementation:**
+   - Implement Ansible vault and AWS Secret Manager for passwords.   
+
+9. **CI/CD Implementation:**
    - Implement CI/CD using platforms like GitLab. Define steps for creating a new AMI and deploying the new AMI into cluster with zero downtime deployment.
