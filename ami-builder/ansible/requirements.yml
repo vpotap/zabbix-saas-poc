@@ -1,8 +1,8 @@
 roles:
-  #- name: geerlingguy.mysql
-  #  version: 4.3.3 
-  - name: geerlingguy.postgresql
-    version: 3.5.0  
+  - name: geerlingguy.mysql
+    version: 4.3.3 
+  #- name: geerlingguy.postgresql
+  #  version: 3.5.0  
   - name: geerlingguy.apache
     version: 3.3.0
   - name: geerlingguy.php
