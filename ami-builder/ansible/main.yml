@@ -1,0 +1,16 @@
+- name: Main setup installation
+  hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: Get start timestamp
+      command: date +%s
+      register: start_time
+      changed_when: false
+
+    - name: Debug distribution and version
+      debug:
+       var:  start_time, ansible_distribution, ansible_distribution_version    
+
+- import_playbook: server_setup.yml
+- import_playbook: zabbix_server.yml

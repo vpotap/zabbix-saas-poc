@@ -1,0 +1,30 @@
+Vagrant.configure("2") do |config|
+
+  # (Ubuntu 20.04)
+  config.vm.define "ubuntu20" do |ubuntu20|
+    ubuntu20.vm.box = "ubuntu/focal64"
+    ubuntu20.vm.network "private_network", type: "dhcp"
+    ubuntu20.vm.network "forwarded_port", guest: 443, host: 443
+    ubuntu20.vm.network "forwarded_port", guest: 80, host: 80
+    ubuntu20.vm.network "forwarded_port", guest: 3306, host: 3306
+    ubuntu20.vm.provider "virtualbox" do |vb|
+      vb.memory = 1024  #
+      vb.cpus = 2        
+    end
+  end
+
+ # (Ubuntu 22.04)
+ config.vm.define "ubuntu22" do |ubuntu22|
+  ubuntu22.vm.box = "ubuntu/jammy64"
+  ubuntu22.vm.network "private_network", type: "dhcp"
+  ubuntu22.vm.network "forwarded_port", guest: 443, host: 443
+  ubuntu22.vm.network "forwarded_port", guest: 80, host: 80
+  ubuntu22.vm.network "forwarded_port", guest: 3306, host: 3306
+  ubuntu22.vm.provider "virtualbox" do |vb|
+    vb.memory = 1024  #
+    vb.cpus = 2        
+  end
+end
+
+
+end

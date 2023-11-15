@@ -1,0 +1,22 @@
+---
+- name: General server setup
+  become: yes
+  hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: update APT cache and upgrade all packages
+      apt:
+        update_cache: yes
+        upgrade: safe
+      
+    - name: install Midnight Commander (mc)
+      apt:
+        name: mc
+        state: present
+
+    - name: install Acl
+      apt:
+        name: acl
+        state: present    
+

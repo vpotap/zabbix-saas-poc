@@ -1,0 +1,14 @@
+mysql_root_password: super-secure-password  
+
+zabbix_server_database: mysql
+zabbix_db_type_long: mysql
+zabbix_server_dbport: 3306
+zabbix_server_dbpassword: super-secure-password
+
+zabbix_server_privileged_host: '%'
+#zabbix_server_mysql_login_host: mysql-host
+zabbix_server_mysql_login_user: root
+zabbix_server_mysql_login_password: super-secure-password
+zabbix_server_mysql_login_port: 3306  
+
+zabbix_api_server_url: "http://zabbix.local"
